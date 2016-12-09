@@ -77,6 +77,7 @@ public function SendMessage(string $message)
 	    "message" => $message
 	  ),
 	  CURLOPT_SAFE_UPLOAD => true,
+	  CURLOPT_RETURNTRANSFER => true
 	));
 	@curl_exec($ch);
 	@curl_close($ch);
