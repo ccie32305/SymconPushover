@@ -61,6 +61,27 @@ class Pushover extends IPSModule
 			$this->SetStatus(202);
 		}
 	}
-	
+	########## public functions ##########
+	/**
+	 * 	Pushover_SendMessage(string $message)
+	 *		send Test message
+	 */	
+public function SendMessage(string $message) 
+{
+
+	@curl_setopt_array($ch = curl_init(), array(
+	  CURLOPT_URL => "https://api.pushover.net/1/messages.json",
+	  CURLOPT_POSTFIELDS => array(
+	    "token" => IPS_GetProperty($this->InstanceID,"PushoverApplicationToken"),
+	    "user" => IPS_GetProperty($this->InstanceID,"PushoverUserToken"),
+	    "message" => $message
+	  ),
+	  CURLOPT_SAFE_UPLOAD => true,
+	));
+	@curl_exec($ch);
+	@curl_close($ch);
+	}
+
+
 }
 ?>
