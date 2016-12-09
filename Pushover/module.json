@@ -1,0 +1,13 @@
+{
+	"id": "{680123cf-d4f1-403d-8fa0-dddb79c6631b}",
+	"name": "Pushover",
+	"type": 1,
+	"vendor": "Pushover",
+	"aliases": [
+		"Pushover Message"
+	],
+	"parentRequirements": [],
+	"childRequirements": [],
+	"implemented": [],
+	"prefix": "Pushover"
+}
