@@ -52,7 +52,7 @@ class Pushover extends IPSModule
 	 */
 	public function TestMessage() 
 	{	
-		Pushover_SendMessage("Testnachricht");
+		$this->SendMessage("Testnachricht");
 	}
 	########## public functions ##########
 	/**
