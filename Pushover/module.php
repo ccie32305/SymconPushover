@@ -52,7 +52,7 @@ class Pushover extends IPSModule
 	 */
 	public function TestMessage() 
 	{	
-		if(!$Pushover == NULL)
+		if(!$PushoverUserToken == NULL)
 		{
 			$this->SetStatus(102);
 		}
